@@ -1137,6 +1137,9 @@ class ApiGenerator(object):
             # Construct permissions for Lambda Authorizers only
             if not authorizer.function_arn:
                 continue
+            # Don't construct permissions for Lambda Authorizers if we are using an invocation role
+            if authorizer.function_invoke_role and authorizer.function_invoke_role != "NONE":
+                continue
 
             permission = self._get_permission(authorizer_name, authorizer.function_arn)
             permissions.append(permission)

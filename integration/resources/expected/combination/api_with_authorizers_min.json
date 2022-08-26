@@ -1,8 +1,6 @@
 [
   { "LogicalResourceId":"MyApi", "ResourceType":"AWS::ApiGateway::RestApi" },
   { "LogicalResourceId":"MyApiDeployment", "ResourceType":"AWS::ApiGateway::Deployment" },
-  { "LogicalResourceId":"MyApiMyLambdaRequestAuthAuthorizerPermission", "ResourceType":"AWS::Lambda::Permission" },
-  { "LogicalResourceId":"MyApiMyLambdaTokenAuthAuthorizerPermission", "ResourceType":"AWS::Lambda::Permission" },
   { "LogicalResourceId":"MyApiProdStage", "ResourceType":"AWS::ApiGateway::Stage" },
   { "LogicalResourceId":"MyCognitoUserPool", "ResourceType":"AWS::Cognito::UserPool" },
   { "LogicalResourceId":"MyCognitoUserPoolClient", "ResourceType":"AWS::Cognito::UserPoolClient" },
